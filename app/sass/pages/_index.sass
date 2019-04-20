@@ -74,7 +74,7 @@
 .time__block
   position: absolute
   bottom: 26px
-  
+
 
 .mdtext
   display: block
@@ -105,24 +105,24 @@
 .news__header
   margin-bottom: 30px
 
-.news__heading   
+.news__heading
   color: $darkblue
   margin-bottom: 20px
-    
- 
-  
+
+
+
 .news__text .h3__heading
   margin-bottom: 20px
 
 .news__item
   margin-bottom: 20px
 
-.news__address 
-  position: relative 
+.news__address
+  position: relative
   color: #fff
   padding-top: 65px
-  padding-left: 40px 
-  z-index: 10 
+  padding-left: 40px
+  z-index: 10
   &::after
     right: -100%
     // right: -970em
@@ -152,7 +152,7 @@
   font-size: 18px
   font-weight: 600
   padding: 25px 40px
-  line-height: 20px  
+  line-height: 20px
   border-radius: 0
   &:hover
     color: lighten($darkblue, 20%)
@@ -273,6 +273,19 @@
     margin-bottom: 15px
     font-size: 12px
 
+.socials-list
+  display: flex
+  justify-content: space-between
+.fb-link
+  @extend %fa-icon
+  @extend .fab
+  &:before
+    content: fa-content($fa-var-facebook)
+    color: $white
+    font-size: 27px
+
+
+
 .footer__copyright
   background-color: $text-light
 
@@ -286,7 +299,7 @@
 .copyright__right
   font-size: 14px
   font-weight: 600
-  color: $text-darker 
+  color: $text-darker
   display: inline-block
   span
     display: block
