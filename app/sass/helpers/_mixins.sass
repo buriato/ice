@@ -1,0 +1,129 @@
+@import 'vars'
+// font-face mixin
+ 
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false )
+  @font-face
+    font-family: $font-family
+    font-weight: $weight
+    font-style: $style
+ 
+    @if $asset-pipeline == true
+      src: font-url('#{$file-path}.eot')
+      src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.woff2') format('woff2'), font-url('#{$file-path}.ttf') format('truetype')
+    @else
+      src: url('#{$file-path}.eot')
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.ttf') format('truetype')
+ 
+ 
+ 
+// rem font size
+//@function rem($size)
+//  $remSize: $size / 16
+//  @return $remSize * 1rem
+//
+//@mixin font-size($size)
+//  font-size: $size*1px
+//  font-size: rem($size)
+ 
+ 
+// Define vertical, horizontal, or both position
+@mixin center($position)
+  position: absolute
+ 
+  @if $position == 'y'
+    top: 50%
+    transform: translateY(-50%)
+ 
+  @else if $position == 'x'
+        left: 50%
+        transform: translate(-50%)
+ 
+  @else if $position == 'xy'
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+ 
+// Using the mixin
+//.foo
+  @include center(both)
+ 
+// transition
+ 
+@mixin trans($prop: all, $time: .2s)
+  transition: $prop $time ease-in-out
+ 
+// clearfix
+ 
+%clearfix
+  *zoom: 1
+ 
+  &:before, &:after
+    content: " "
+    display: table
+ 
+  &:after
+    clear: both
+ 
+// use @extend %clearfix
+ 
+// %section-title
+//   position: relative
+//   &:after
+//     display: block
+//     content: ''
+//     position: absolute
+//     top: 0
+//     left: 0
+//     height: 100%
+//     width: 100%
+//     z-index: 2
+ 
+// %title
+//   font-family: $title-font
+//   display: inline-block
+//   position: relative
+//   text-transform: uppercase
+//   text-align: center
+ 
+//   &:after, &:before
+//     content: ''
+//     display: block
+//     +center(y)
+//     background: rgba($text-blue, .5)
+ 
+// //btn
+ 
+// @mixin btn($bg: $green)
+//   display: inline-block
+//   background-color: $bg
+//   height: 46px
+//   line-height: 46px
+//   padding: 0 18px
+//   color: #fff
+//   font-weight: 600
+//   border-radius: 5px
+//   border: none
+//   @content
+//   &:hover
+//     background-color: darken($bg, 4)
+ 
+// media queries
+@mixin media($maw)
+  @media (max-width: $maw)
+    @content
+ 
+@mixin desktop
+  @media (max-width: 1200px)
+    @content
+ 
+@mixin laptop
+  @media (max-width: 992px)
+    @content
+ 
+@mixin tablet
+  @media (max-width: 768px)
+    @content
+ 
+@mixin phone
+  @media (max-width: 480px)
+    @content

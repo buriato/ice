@@ -1,0 +1,293 @@
+//Header styles
+
+.masthead
+  color: #fff
+  height: 100%
+  min-height: 500px;
+  background-image: url(../img/ice-rinks-facebook.png)
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+
+.gradient
+  background-image: url(../img/Rectangle.png)
+  background-repeat: none
+  background-attachment: scroll
+  background-position: center center
+  background-size: cover
+
+.navbar
+  height: 124px
+
+.navbar-color
+  background-color: transparent
+  border-color: transparent
+
+.nav-text
+  font-family: $secondary-font
+  text-transform: uppercase
+  font-weight: bold
+  font-size: 14pt
+  letter-spacing: 1px
+  color: #fff
+
+.dropdown-toggle::after
+  display: none
+
+.dropdown-item
+  font-family: $secondary-font
+  text-transform: uppercase
+  font-weight: bold
+  font-size: 12pt
+  padding: 15px
+  letter-spacing: 1px
+  text-align: left
+  color: $darkblue
+  &:hover
+    background-color: rgba(42, 198, 198, 0.1)
+
+.nav-item:hover
+  background-color: rgba(42, 198, 198, 0.1)
+
+.nav-link:hover
+  color: #fff
+
+.navbar-toggler
+  background-color: $accent
+  border: 1px solid $darkblue
+
+.hero__block
+  display: block
+  height: calc(100% - 124px)
+  position: relative
+.hero__text
+  position: absolute
+  top: 40%
+  transform: translate(0,-50%)
+
+.intro__text
+  font-weight: bold
+  font-size: 48px
+  color: $white
+  font-family: $default-font
+
+.time__block
+  position: absolute
+  bottom: 26px
+  
+
+.mdtext
+  display: block
+  font-size: 18px
+  font-weight: bold
+
+.smtext
+  display: block
+  font-size: 14px
+  font-weight: 600
+  color: rgba(247, 249, 239, 0.5)
+
+
+//start news section
+
+.news__block
+  padding-top: 68px
+
+
+.news__section
+  // padding-top: 68px
+  color: $text-dark
+  padding-bottom: 270px
+  width: 100%
+
+
+
+.news__header
+  margin-bottom: 30px
+
+.news__heading   
+  color: $darkblue
+  margin-bottom: 20px
+    
+ 
+  
+.news__text .h3__heading
+  margin-bottom: 20px
+
+.news__item
+  margin-bottom: 20px
+
+.news__address 
+  position: relative 
+  color: #fff
+  padding-top: 65px
+  padding-left: 40px 
+  z-index: 10 
+  &::after
+    right: -100%
+    // right: -970em
+    background-image: url(../img/Group.png)
+    background-repeat: no-repeat
+    background-size: cover
+    content: ''
+    display: block
+    position: absolute
+    width: 200%
+    top: 0
+    bottom: 0
+    z-index: -1
+  p
+    padding-bottom: 30px
+
+
+
+.blue-btn
+  position: absolute
+  top: -72px
+  left: 0px
+  color: #fff
+  background-color: $accent
+  border-color: $accent
+  font-family: $default-font
+  font-size: 18px
+  font-weight: 600
+  padding: 25px 40px
+  line-height: 20px  
+  border-radius: 0
+  &:hover
+    color: lighten($darkblue, 20%)
+
+
+// slider section
+
+.slider__section
+  margin-top: -140px
+  height: 600px
+
+
+.slider-box
+  background-color: $darkblue
+  text-align: left
+  padding-left: 60px
+  padding-top: 100px
+  padding-bottom: 64px
+  left: 50%
+  right: 0px
+  bottom: 0px
+
+.team__names
+  font-size: 24px
+  font-weight: bold
+
+.next, .prev
+  background-color: $darkblue
+  width: 72px
+  height: 72px
+  top: auto
+
+.prev
+  right: 0
+  left: 35.9%
+
+.next
+  left: 43%
+
+.slider-text
+  color: $blue
+  font-weight: bold
+  font-size: 12pt
+
+.slider-text-sm
+  color: #CECECE
+  font-size: 16pt
+
+.carousel__caption
+  top: 5%
+  left: 6%
+  text-align: left
+
+
+// start cafe section
+
+.cafe__left
+  position: relative
+  &::after
+    position: absolute
+    background-image: url(../img/Group111.png)
+    background-repeat: no-repeat
+    background-size: cover
+    color: $white
+    content: ''
+    top: 0
+    bottom: 0
+    left: -100%
+    width: 200%
+    z-index: -1
+  .link__text
+    margin-bottom: 15px
+
+.cafe__heading
+  margin-top: 66px
+  margin-bottom: 46px
+
+.cafe__content
+  margin-bottom: 46px
+
+.cafe__right
+  padding-left: 40px
+  padding-top: 65px
+  padding-right: 10%
+  &_text
+    color: $text-dark
+    font-size: 16px
+  .link__text
+    margin-bottom: 15px
+
+
+
+// start footer
+
+.page__footer
+  background-color: $dark
+  padding: 80px 0 60px
+
+.footer__nav_list
+  font-size: 12px
+  font-weight: 600
+  text-transform: uppercase
+  list-style: none
+  padding: 0
+
+.footer__nav_item
+  margin-bottom: 12px
+
+.footer__nav_link
+  font-size: 12px
+  font-family: $default-font
+  font-weight: 400
+  color: $white
+
+.footer__contacts
+  list-style: none
+  &_item
+    margin-bottom: 15px
+    font-size: 12px
+
+.footer__copyright
+  background-color: $text-light
+
+
+.copyright__text
+  margin-top: 1rem
+  font-size: 14px
+  font-weight: 600
+  color: $text-darker
+
+.copyright__right
+  font-size: 14px
+  font-weight: 600
+  color: $text-darker 
+  display: inline-block
+  span
+    display: block
+    margin-bottom: 0
